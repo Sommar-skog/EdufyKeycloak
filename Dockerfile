@@ -11,5 +11,5 @@ COPY keycloak.conf /opt/keycloak/conf/keycloak.conf
 
 EXPOSE 8080
 
-CMD ["start-dev", "--verbose"]
+CMD ["start-dev"]
 
