@@ -17,7 +17,7 @@ steps:
     displayName: 'Logga in i ACR'
     inputs:
       command: login
-      containerRegistry: 'rg-assa-dev-conn'
+      containerRegistry: 'edufy-acr'
 
   - task: Docker@2
     displayName: 'Bygg Docker-bild'
