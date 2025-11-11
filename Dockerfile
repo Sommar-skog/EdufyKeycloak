@@ -9,4 +9,4 @@ RUN /opt/keycloak/bin/kc.sh build
 
 EXPOSE 8080
 
-CMD ["/opt/keycloak/bin/kc.sh", "start-dev"]
+CMD ["/opt/keycloak/bin/kc.sh", "start", "--optimized"]
