@@ -10,26 +10,30 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  imageName: keycloak-demo
+  imageName: edufy-keycloak
 
 steps:
   - task: Docker@2
-    displayName: 'Logga in i ACR'
+    displayName: 'Login to Azure Container Registry'
     inputs:
       command: login
       containerRegistry: 'edufy-acr'
 
   - task: Docker@2
-    displayName: 'Bygg Docker-bild'
+    displayName: 'Build Docker image'
     inputs:
       command: build
+      containerRegistry: 'edufy-acr'
+      repository: $(imageName)
       Dockerfile: '**/Dockerfile'
       tags: |
-        $(imageName):$(Build.BuildId)
+        $(Build.BuildId)
 
   - task: Docker@2
-    displayName: 'Push till ACR'
+    displayName: 'Push Docker image to ACR'
     inputs:
       command: push
+      containerRegistry: 'edufy-acr'
+      repository: $(imageName)
       tags: |
-        $(imageName):$(Build.BuildId)
+        $(Build.BuildId)
