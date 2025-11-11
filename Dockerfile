@@ -1,6 +1,6 @@
 #ED-291-AA
 
-FROM quay.io/keycloak/keycloak:24.0.1
+FROM quay.io/keycloak/keycloak:21.1.2
 
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=Amand4Sim0nSar@Alexande&
