@@ -9,4 +9,5 @@ RUN /opt/keycloak/bin/kc.sh build
 
 EXPOSE 8080
 
-CMD ["/opt/keycloak/bin/kc.sh", "start", "--optimized"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
+CMD ["start", "--http-port=8080", "--hostname-strict=false"]
