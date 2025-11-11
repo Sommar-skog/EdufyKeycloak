@@ -11,5 +11,5 @@ COPY keycloak.conf /opt/keycloak/conf/keycloak.conf
 
 EXPOSE 8080
 
-CMD ["start-dev"]
+CMD ["start-dev", "--hostname-strict=false", "--proxy=edge"]
 
