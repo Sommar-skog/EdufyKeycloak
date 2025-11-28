@@ -12,7 +12,7 @@ After a full data loss on the Azure deployment, the team migrated away from this
 The repository remains available for reference but is not part of the current infrastructure.
 
 ---
-
+ 
 ## 🧩 Related Projects
 
 ### Organization
